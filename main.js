@@ -5,8 +5,13 @@ const dotenv = require("dotenv");
 const connectDb = require("./config/db");
 const mealsRoutes = require("./routes/meal")
 
+
 dotenv.config();
+
+
+
 connectDb()
+
 
 const app = express();
 app.use(express.json());
