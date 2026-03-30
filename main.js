@@ -4,7 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDb = require("./config/db");
 const mealsRoutes = require("./routes/meal")
-
+const categoryRoutes = require("./routes/categories")
 
 dotenv.config();
 
@@ -21,8 +21,8 @@ app.use(express.json());
 
 
 app.use("/api/meals", mealsRoutes)
+app.use("/api/categories", categoryRoutes)
 
-
-app.listen(5000, () => {
+app.listen(4000, () => {
   console.log("listenning on port 4000")
 })
