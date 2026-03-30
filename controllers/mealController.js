@@ -33,8 +33,38 @@ const getMealById = async(req,res) => {
     }
 }
 
-const deleteById = async(req,res) => {
-    
+const deletemealById = async(req,res) => {
+    try {
+        const {id} = req.params
+        
+        const deletedMeal = await Meal.findByIdAndDelete(id)
+        
+        if (!deletedMeal) {
+            return res.status(404).json({ message: "Meal not found" })
+        }
+        
+        return res.status(200).json({
+            message: "Meal deleted successfully",
+        })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ error: "Failed to delete meal" })
+    }
+}
+ 
+const updatemealById = async(req,res) =>{
+    try {
+        const {id} = req.params
+        const body = req.body
+        const updatedMeal = await Meal.findByIdAndUpdate(id, body, { new: true })
+        if (!updatedMeal) {
+            return res.status(404).json({ message: "Meal not found" })
+        }
+        return res.status(200).json(updatedMeal)  
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ error: "Failed to update meal" })
+    }
 }
 
-module.exports = {getAllMeals, addMeal, getMealById}
+module.exports = {getAllMeals, addMeal, getMealById, deletemealById, updatemealById}

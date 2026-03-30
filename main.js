@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDb = require("./config/db");
 const mealsRoutes = require("./routes/meal")
+const categoryRoutes = require("./routes/categories")
 const catRoutes = require("./routes/category")
 
 
@@ -18,8 +19,10 @@ app.use(express.json());
 //testing merge
 
 app.use("/api/meals", mealsRoutes)
+app.use("/api/categories", categoryRoutes)
+
 app.use("/api/meals/categories", catRoutes)
 
-app.listen(5000, () => {
+app.listen(4000, () => {
   console.log("listenning on port 5000")
 })
