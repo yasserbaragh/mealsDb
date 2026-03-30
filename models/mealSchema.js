@@ -11,6 +11,8 @@ const mealSc = mongoose.Schema({
         type: Number
     },
     ingredients: [String],
+
+    
     category: {type: mongoose.Schema.Types.ObjectId, ref: "mealCategory"},
 })
 
