@@ -21,7 +21,7 @@ app.use(express.json());
 //testing merge
 
 app.use("/api/meals", mealsRoutes)
-
+//comment
 
 app.listen(5000, () => {
   console.log("listenning on port 4000")
