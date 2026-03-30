@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const {catSchema} = mongoose
 
 const mealSc = mongoose.Schema({
     name: {
@@ -9,7 +10,9 @@ const mealSc = mongoose.Schema({
         required: true,
         type: Number
     },
-    ingredients: [String]
+    ingredients: [String],
+    category: {type: mongoose.Schema.Types.ObjectId, ref: "mealCategory"},
 })
+
 
 module.exports = mongoose.model("Meal", mealSc)
