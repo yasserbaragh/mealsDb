@@ -6,5 +6,5 @@ const router = express.Router()
 router.get("/", getAllMeals)
 router.post("/", addMeal)
 router.get("/:id", getMealById)
-
+// testing giiit
 module.exports = router
