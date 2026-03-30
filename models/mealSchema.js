@@ -9,7 +9,8 @@ const mealSc = mongoose.Schema({
         required: true,
         type: Number
     },
-    ingredients: [String]
+    ingredients: [String],
 })
 
+    
 module.exports = mongoose.model("Meal", mealSc)
