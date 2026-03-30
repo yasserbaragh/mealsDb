@@ -4,7 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDb = require("./config/db");
 const mealsRoutes = require("./routes/meal")
-
+//const meals 
 
 dotenv.config();
 
