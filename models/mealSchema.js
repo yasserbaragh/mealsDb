@@ -3,14 +3,13 @@ const {catSchema} = mongoose
 
 const mealSc = mongoose.Schema({
     name: {
-        required: true,
         type: String
     },
     prix: {
-        required: true,
         type: Number
     },
     ingredients: [String],
+    picture: String,
     category: {type: mongoose.Schema.Types.ObjectId, ref: "mealCategory"},
 })
 

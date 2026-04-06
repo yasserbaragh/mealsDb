@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAllCategories, addCategory, getCategoryById, DeleteById, addMealToCategory} = require('../controllers/categoryController');
+const { getAllCategories, addCategory, getCategoryById, DeleteById, addMealToCategory} = require('../controllers/catController');
 
 router.get('/', getAllCategories);     
 router.get('/:id', getCategoryById);     

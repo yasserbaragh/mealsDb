@@ -33,8 +33,4 @@ const getMealById = async(req,res) => {
     }
 }
 
-const deleteById = async(req,res) => {
-    
-}
-
 module.exports = {getAllMeals, addMeal, getMealById}
