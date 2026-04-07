@@ -7,6 +7,7 @@ const mealSc = mongoose.Schema({
         type: String
     },
     prix: {
+        
         type: Number
     },
     ingredients: [String],

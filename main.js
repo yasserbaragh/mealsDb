@@ -5,6 +5,9 @@ const dotenv = require("dotenv");
 const connectDb = require("./config/db");
 const mealsRoutes = require("./routes/meal")
 const categoryRoutes = require("./routes/category")
+const dns = require("node:dns/promises");
+
+dns.setServers(["1.1.1.1"]);
 
 
 
